@@ -33,21 +33,20 @@ namespace WebBrowser.UI
 
         }
 
-        private void txtBoxAddress_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnGo_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate(txtBoxAddress.Text);
         }
 
-        private void txtBoxAddress_Enter(object sender, EventArgs e)
+        private void KeyDownTxtb(object sender, KeyEventArgs k)
         {
-
-            webBrowser1.Navigate(txtBoxAddress.Text);
-            
+            if (k.KeyCode == Keys.Return)
+            {
+                webBrowser1.Navigate(txtBoxAddress.Text);
+                k.Handled = true;
+                k.SuppressKeyPress = true;
+            }
         }
     }
 }

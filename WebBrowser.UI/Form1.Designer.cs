@@ -208,8 +208,7 @@ namespace WebBrowser.UI
             this.txtBoxAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxAddress.Name = "txtBoxAddress";
             this.txtBoxAddress.Size = new System.Drawing.Size(100, 25);
-            this.txtBoxAddress.Enter += new System.EventHandler(this.txtBoxAddress_Enter);
-            this.txtBoxAddress.Click += new System.EventHandler(this.txtBoxAddress_Click);
+            this.txtBoxAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownTxtb);
             // 
             // btnGo
             // 
