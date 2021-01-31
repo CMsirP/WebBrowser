@@ -25,7 +25,12 @@ namespace WebBrowser.UI
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You are using WebSlinger, a browser designed by Christopher Pinto. \r\n" +
-                "Contact: cmp0106@auburn.edu")
+                "Contact: cmp0106@auburn.edu");
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }
