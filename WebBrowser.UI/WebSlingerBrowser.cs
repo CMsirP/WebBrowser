@@ -46,5 +46,12 @@ namespace WebBrowser.UI
         {
             this.tabControl1.TabPages.Remove(this.tabControl1.SelectedTab);
         }
+        private void KeyDown_Control(object sender, KeyEventArgs k)
+        {
+            if (k.Control && k.KeyCode == Keys.W)
+            {
+                this.tabControl1.TabPages.Remove(this.tabControl1.SelectedTab);
+            }
+        }
     }
 }
