@@ -76,6 +76,7 @@ namespace WebBrowser.UI
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(23, 22);
             this.btnBack.Text = "Back";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnForward
             // 
@@ -85,6 +86,7 @@ namespace WebBrowser.UI
             this.btnForward.Name = "btnForward";
             this.btnForward.Size = new System.Drawing.Size(23, 22);
             this.btnForward.Text = "toolStripButton1";
+            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
             // btnRefresh
             // 
@@ -109,7 +111,7 @@ namespace WebBrowser.UI
             this.txtBoxAddress.AcceptsReturn = true;
             this.txtBoxAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxAddress.Name = "txtBoxAddress";
-            this.txtBoxAddress.Size = new System.Drawing.Size(100, 25);
+            this.txtBoxAddress.Size = new System.Drawing.Size(200, 25);
             this.txtBoxAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownTxtb);
             this.txtBoxAddress.Click += new System.EventHandler(this.txtBoxAddress_Click);
             // 
