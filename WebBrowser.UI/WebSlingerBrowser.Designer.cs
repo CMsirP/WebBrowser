@@ -43,8 +43,10 @@ namespace WebBrowser.UI
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.browserHousing1 = new WebBrowser.UI.BrowserHousing();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -149,6 +151,7 @@ namespace WebBrowser.UI
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.browserHousing1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -156,6 +159,16 @@ namespace WebBrowser.UI
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // browserHousing1
+            // 
+            this.browserHousing1.BackColor = System.Drawing.SystemColors.Control;
+            this.browserHousing1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.browserHousing1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.browserHousing1.Location = new System.Drawing.Point(3, 3);
+            this.browserHousing1.Name = "browserHousing1";
+            this.browserHousing1.Size = new System.Drawing.Size(738, 354);
+            this.browserHousing1.TabIndex = 0;
             // 
             // WebSlingerBrowser
             // 
@@ -170,6 +183,7 @@ namespace WebBrowser.UI
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +205,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private BrowserHousing browserHousing1;
     }
 }
