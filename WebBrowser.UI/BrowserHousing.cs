@@ -14,6 +14,7 @@ namespace WebBrowser.UI
     {
         private Stack<string> back = new Stack<string>();
         private Stack<string> forward = new Stack<string>();
+        private string currentAddress;
 
         public BrowserHousing()
         {
@@ -21,20 +22,28 @@ namespace WebBrowser.UI
         }
         private void btnGo_Click(object sender, EventArgs e)
         {
-            string currentAddress = txtBoxAddress.Text;
+            if (currentAddress != null && !back.Contains(currentAddress))
+            {
+                back.Push(currentAddress);
+            }
+            currentAddress = txtBoxAddress.Text;
             webBrowser1.Navigate(currentAddress);
-            back.Push(currentAddress);
+            forward.Clear();
         }
 
         private void KeyDownTxtb(object sender, KeyEventArgs k)
         {
             if (k.KeyCode == Keys.Return)
             {
-                string currentAddress = txtBoxAddress.Text;
+                if (currentAddress != null && !back.Contains(currentAddress))
+                {
+                    back.Push(currentAddress);
+                }
+                currentAddress = txtBoxAddress.Text;
                 webBrowser1.Navigate(currentAddress);
                 k.Handled = true;
                 k.SuppressKeyPress = true;
-                back.Push(currentAddress);
+                forward.Clear();
             }
         }
 
