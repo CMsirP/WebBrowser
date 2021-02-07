@@ -58,7 +58,9 @@ namespace WebBrowser.UI
             {
                 string prevAdd = back.Pop();
                 webBrowser1.Navigate(prevAdd);
-                forward.Push(prevAdd);
+                forward.Push(currentAddress);
+                txtBoxAddress.Text = prevAdd;
+                currentAddress = prevAdd;
             }
         }
 
@@ -68,7 +70,9 @@ namespace WebBrowser.UI
             {
                 string nextAdd = forward.Pop();
                 webBrowser1.Navigate(nextAdd);
-                back.Push(nextAdd);
+                back.Push(currentAddress);
+                txtBoxAddress.Text = nextAdd;
+                currentAddress = nextAdd;
             }
 
         }
