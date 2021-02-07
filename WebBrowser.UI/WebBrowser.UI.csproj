@@ -46,16 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BrowserHousing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrowserHousing.Designer.cs">
+      <DependentUpon>BrowserHousing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSlingerBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="WebSlingerBrowser.Designer.cs">
+      <DependentUpon>WebSlingerBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="BrowserHousing.resx">
+      <DependentUpon>BrowserHousing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSlingerBrowser.resx">
+      <DependentUpon>WebSlingerBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

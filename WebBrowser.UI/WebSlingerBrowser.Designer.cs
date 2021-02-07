@@ -1,7 +1,7 @@
 ﻿
 namespace WebBrowser.UI
 {
-    partial class Form1
+    partial class WebSlingerBrowser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WebBrowser.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebSlingerBrowser));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
