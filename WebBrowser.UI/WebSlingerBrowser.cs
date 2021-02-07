@@ -28,5 +28,23 @@ namespace WebBrowser.UI
                 "Contact: cmp0106@auburn.edu");
         }
 
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BrowserHousing myBH = new BrowserHousing();
+            var tabPage = new TabPage("New Tab");
+            tabPage.Controls.Add(myBH);
+            tabControl1.TabPages.Add(tabPage);
+
+        }
+
+        private void browserHousing1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.tabControl1.TabPages.Remove(this.tabControl1.SelectedTab);
+        }
     }
 }

@@ -76,14 +76,16 @@ namespace WebBrowser.UI
             // newTabToolStripMenuItem
             // 
             this.newTabToolStripMenuItem.Name = "newTabToolStripMenuItem";
-            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newTabToolStripMenuItem.Text = "New Tab";
+            this.newTabToolStripMenuItem.Click += new System.EventHandler(this.newTabToolStripMenuItem_Click);
             // 
             // closeCurrentTabToolStripMenuItem
             // 
             this.closeCurrentTabToolStripMenuItem.Name = "closeCurrentTabToolStripMenuItem";
-            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeCurrentTabToolStripMenuItem.Text = "Close Current Tab";
+            this.closeCurrentTabToolStripMenuItem.Click += new System.EventHandler(this.closeCurrentTabToolStripMenuItem_Click);
             // 
             // savePageAsHTMLToolStripMenuItem
             // 
@@ -157,7 +159,7 @@ namespace WebBrowser.UI
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(744, 360);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "New Tab";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // browserHousing1
@@ -169,6 +171,7 @@ namespace WebBrowser.UI
             this.browserHousing1.Name = "browserHousing1";
             this.browserHousing1.Size = new System.Drawing.Size(738, 354);
             this.browserHousing1.TabIndex = 0;
+            this.browserHousing1.Load += new System.EventHandler(this.browserHousing1_Load);
             // 
             // WebSlingerBrowser
             // 
