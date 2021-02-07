@@ -16,5 +16,24 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
+        private void btnGo_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate(txtBoxAddress.Text);
+        }
+
+        private void KeyDownTxtb(object sender, KeyEventArgs k)
+        {
+            if (k.KeyCode == Keys.Return)
+            {
+                webBrowser1.Navigate(txtBoxAddress.Text);
+                k.Handled = true;
+                k.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtBoxAddress_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

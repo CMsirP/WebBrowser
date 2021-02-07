@@ -28,25 +28,5 @@ namespace WebBrowser.UI
                 "Contact: cmp0106@auburn.edu");
         }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
-        }
-
-
-        private void btnGo_Click(object sender, EventArgs e)
-        {
-            webBrowser1.Navigate(txtBoxAddress.Text);
-        }
-
-        private void KeyDownTxtb(object sender, KeyEventArgs k)
-        {
-            if (k.KeyCode == Keys.Return)
-            {
-                webBrowser1.Navigate(txtBoxAddress.Text);
-                k.Handled = true;
-                k.SuppressKeyPress = true;
-            }
-        }
     }
 }
