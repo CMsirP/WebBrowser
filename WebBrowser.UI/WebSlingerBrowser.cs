@@ -44,14 +44,16 @@ namespace WebBrowser.UI
 
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.tabControl1.TabPages.Remove(this.tabControl1.SelectedTab);
-        }
-        private void KeyDown_Control(object sender, KeyEventArgs k)
-        {
-            if (k.Control && k.KeyCode == Keys.W)
+
+            try
             {
                 this.tabControl1.TabPages.Remove(this.tabControl1.SelectedTab);
             }
+            catch
+            {
+                ArgumentNullException argumentNullException;
+            }
         }
+
     }
 }

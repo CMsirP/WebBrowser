@@ -14,7 +14,7 @@ namespace WebBrowser.UI
     {
         private Stack<string> back = new Stack<string>();
         private Stack<string> forward = new Stack<string>();
-        private string currentAddress;
+        private string currentAddress = "";
 
         public BrowserHousing()
         {
@@ -22,7 +22,7 @@ namespace WebBrowser.UI
         }
         private void btnGo_Click(object sender, EventArgs e)
         {
-            if (currentAddress != null && !back.Contains(currentAddress))
+            if (currentAddress != "")
             {
                 back.Push(currentAddress);
             }
@@ -35,7 +35,7 @@ namespace WebBrowser.UI
         {
             if (k.KeyCode == Keys.Return)
             {
-                if (currentAddress != null && !back.Contains(currentAddress))
+                if (currentAddress != "")
                 {
                     back.Push(currentAddress);
                 }
@@ -54,32 +54,45 @@ namespace WebBrowser.UI
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (back.Any())
+            if (!back.Any())
+            {
+                return;
+            }
+            else
             {
                 string prevAdd = back.Pop();
-                webBrowser1.Navigate(prevAdd);
                 forward.Push(currentAddress);
-                txtBoxAddress.Text = prevAdd;
-                currentAddress = prevAdd;
+                webBrowser1.Navigate(prevAdd);
             }
         }
 
         private void btnForward_Click(object sender, EventArgs e)
         {
-            if (forward.Any())
+            if (!forward.Any())
+            {
+                return;
+            }
+            else 
             {
                 string nextAdd = forward.Pop();
-                webBrowser1.Navigate(nextAdd);
                 back.Push(currentAddress);
-                txtBoxAddress.Text = nextAdd;
-                currentAddress = nextAdd;
+                webBrowser1.Navigate(nextAdd);
             }
+
 
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             webBrowser1.Refresh();
+        }
+
+        private void webBrowser1_Navigated(object sender,
+    WebBrowserNavigatedEventArgs e)
+        {
+            back.Push(currentAddress);
+            txtBoxAddress.Text = webBrowser1.Url.ToString();
+            currentAddress = txtBoxAddress.Text;
         }
     }
 }
