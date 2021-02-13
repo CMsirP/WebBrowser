@@ -52,6 +52,11 @@
     <Compile Include="BrowserHousing.Designer.cs">
       <DependentUpon>BrowserHousing.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistoryDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WebSlingerBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +80,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="HistoryDBDataSet.xsc">
+      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HistoryDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HistoryDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HistoryDBDataSet.xss">
+      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
