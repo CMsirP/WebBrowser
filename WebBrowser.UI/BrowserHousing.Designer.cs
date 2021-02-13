@@ -86,7 +86,7 @@ namespace WebBrowser.UI
             this.btnForward.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnForward.Name = "btnForward";
             this.btnForward.Size = new System.Drawing.Size(23, 22);
-            this.btnForward.Text = "toolStripButton1";
+            this.btnForward.Text = "Forward";
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
             // btnRefresh
@@ -96,7 +96,7 @@ namespace WebBrowser.UI
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(23, 22);
-            this.btnRefresh.Text = "toolStripButton2";
+            this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnHome
@@ -106,7 +106,7 @@ namespace WebBrowser.UI
             this.btnHome.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(23, 22);
-            this.btnHome.Text = "toolStripButton3";
+            this.btnHome.Text = "Home";
             // 
             // txtBoxAddress
             // 
@@ -124,7 +124,7 @@ namespace WebBrowser.UI
             this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(23, 22);
-            this.btnGo.Text = "toolStripButton1";
+            this.btnGo.Text = "Go";
             this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // drpDnBookmark
@@ -134,7 +134,7 @@ namespace WebBrowser.UI
             this.drpDnBookmark.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drpDnBookmark.Name = "drpDnBookmark";
             this.drpDnBookmark.Size = new System.Drawing.Size(29, 22);
-            this.drpDnBookmark.Text = "toolStripDropDownButton1";
+            this.drpDnBookmark.Text = "Bookmarks";
             // 
             // BrowserHousing
             // 
