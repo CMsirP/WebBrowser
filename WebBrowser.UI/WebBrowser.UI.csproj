@@ -46,11 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookmarksDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookmarksDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookmarksManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookmarksManagerForm.Designer.cs">
+      <DependentUpon>BookmarksManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BrowserHousing.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="BrowserHousing.Designer.cs">
       <DependentUpon>BrowserHousing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryManagerForm.Designer.cs">
+      <DependentUpon>HistoryManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HistoryDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -68,6 +85,9 @@
     <EmbeddedResource Include="BrowserHousing.resx">
       <DependentUpon>BrowserHousing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HistoryManagerForm.resx">
+      <DependentUpon>HistoryManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WebSlingerBrowser.resx">
       <DependentUpon>WebSlingerBrowser.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +100,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BookmarksDBDataSet1.xsc">
+      <DependentUpon>BookmarksDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BookmarksDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookmarksDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookmarksDBDataSet1.xss">
+      <DependentUpon>BookmarksDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="HistoryDBDataSet.xsc">
       <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
     </None>
