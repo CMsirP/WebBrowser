@@ -57,12 +57,14 @@ namespace WebBrowser.UI
 
         private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            HistoryManagerForm manager = new HistoryManagerForm();
+            manager.ShowDialog();
         }
 
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            BookmarksManagerForm manager = new BookmarksManagerForm();
+            manager.ShowDialog();
         }
     }
 }
