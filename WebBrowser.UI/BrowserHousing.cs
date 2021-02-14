@@ -84,5 +84,18 @@ namespace WebBrowser.UI
             item.URL = webBrowser1.Document.Url.ToString();
 
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            if (e.Url.Equals(webBrowser1.Url) && webBrowser1.ReadyState == WebBrowserReadyState.Complete)
+            {
+                string title = ((HtmlDocument)webBrowser1.Document).Title;
+                var item = new HistoryItem();
+                item.Title = title;
+                item.URL = webBrowser1.Document.Url.ToString();
+                item.Date = DateTime.Now;
+                HistoryItemManager.AddHistoryItem(item);
+            }
+        }
     }
 }
