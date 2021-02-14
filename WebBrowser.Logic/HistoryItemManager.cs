@@ -7,7 +7,7 @@ using WebBrowser.Data.History_BookmarksDataSetTableAdapters;
 
 namespace WebBrowser.Logic
 {
-    class HistoryItemManager
+   public class HistoryItemManager
     {
         public static void AddHistoryItem(HistoryItem item)
         {

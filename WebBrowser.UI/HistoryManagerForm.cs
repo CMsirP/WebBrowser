@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
+
 
 namespace WebBrowser.UI
 {
@@ -17,6 +19,14 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        private void listBoxHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void HistoryManagerForm_Load(object sender, EventArgs e)
+        {
+            List<HistoryItem> list = new List<HistoryItem>();
+        }
     }
 }

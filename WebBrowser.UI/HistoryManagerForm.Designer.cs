@@ -29,19 +29,33 @@ namespace WebBrowser.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.listBoxHistory = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
+            // 
+            // listBoxHistory
+            // 
+            this.listBoxHistory.FormattingEnabled = true;
+            this.listBoxHistory.Location = new System.Drawing.Point(54, 61);
+            this.listBoxHistory.Name = "listBoxHistory";
+            this.listBoxHistory.Size = new System.Drawing.Size(646, 433);
+            this.listBoxHistory.TabIndex = 0;
+            this.listBoxHistory.SelectedIndexChanged += new System.EventHandler(this.listBoxHistory_SelectedIndexChanged);
             // 
             // HistoryManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 534);
+            this.Controls.Add(this.listBoxHistory);
             this.Name = "HistoryManagerForm";
             this.Text = "History Manager";
+            this.Load += new System.EventHandler(this.HistoryManagerForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox listBoxHistory;
     }
 }
