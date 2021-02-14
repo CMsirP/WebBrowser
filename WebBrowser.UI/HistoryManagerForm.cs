@@ -16,5 +16,20 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
+
+        private void historyBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.historyBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.historyDBDataSet);
+
+        }
+
+        private void HistoryManagerForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'historyDBDataSet.History' table. You can move, or remove it, as needed.
+            this.historyTableAdapter.Fill(this.historyDBDataSet.History);
+
+        }
     }
 }

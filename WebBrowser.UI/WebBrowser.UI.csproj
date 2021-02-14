@@ -82,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookmarksManagerForm.resx">
+      <DependentUpon>BookmarksManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BrowserHousing.resx">
       <DependentUpon>BrowserHousing.cs</DependentUpon>
     </EmbeddedResource>
