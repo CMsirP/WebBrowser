@@ -26,5 +26,7 @@ namespace WebBrowser.UI
                 string input = item.Title + "(" + item.URL + ")";
                 listBoxBookmarks.Items.Add(input);
             }
+        }
     }
+
 }
