@@ -38,7 +38,6 @@ namespace WebBrowser.UI
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "BookmarksManagerForm";
             this.Text = "BookmarksManagerForm";
-            this.Load += new System.EventHandler(this.BookmarksManagerForm_Load);
             this.ResumeLayout(false);
 
         }

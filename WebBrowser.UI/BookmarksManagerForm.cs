@@ -17,19 +17,5 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        private void bookmarksBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bookmarksBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bookmarksDBDataSet1);
-
-        }
-
-        private void BookmarksManagerForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'bookmarksDBDataSet1.Bookmarks' table. You can move, or remove it, as needed.
-            this.bookmarksTableAdapter.Fill(this.bookmarksDBDataSet1.Bookmarks);
-
-        }
     }
 }

@@ -38,7 +38,6 @@ namespace WebBrowser.UI
             this.ClientSize = new System.Drawing.Size(800, 534);
             this.Name = "HistoryManagerForm";
             this.Text = "History Manager";
-            this.Load += new System.EventHandler(this.HistoryManagerForm_Load);
             this.ResumeLayout(false);
 
         }
