@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
 
 namespace WebBrowser.UI
 {
@@ -65,6 +66,23 @@ namespace WebBrowser.UI
             webBrowser1.ScriptErrorsSuppressed = true;
             txtBoxAddress.Text = webBrowser1.Url.ToString();
             currentAddress = txtBoxAddress.Text;
+        }
+
+        private void btnBookmark_Click(object sender, EventArgs e)
+        {
+            string title = ((HtmlDocument)webBrowser1.Document).Title;
+            List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
+            foreach (var bm in list)
+            {
+                if (bm.Title.Equals(title))
+                {
+                    return;
+                }
+            }
+            var item = new BookmarkItem();
+            item.Title = title;
+            item.URL = webBrowser1.Document.Url.ToString();
+
         }
     }
 }

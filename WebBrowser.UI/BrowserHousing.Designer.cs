@@ -39,7 +39,7 @@ namespace WebBrowser.UI
             this.btnHome = new System.Windows.Forms.ToolStripButton();
             this.txtBoxAddress = new System.Windows.Forms.ToolStripTextBox();
             this.btnGo = new System.Windows.Forms.ToolStripButton();
-            this.drpDnBookmark = new System.Windows.Forms.ToolStripDropDownButton();
+            this.btnBookmark = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@ namespace WebBrowser.UI
             this.btnHome,
             this.txtBoxAddress,
             this.btnGo,
-            this.drpDnBookmark});
+            this.btnBookmark});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(765, 25);
@@ -127,14 +127,15 @@ namespace WebBrowser.UI
             this.btnGo.Text = "Go";
             this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
-            // drpDnBookmark
+            // btnBookmark
             // 
-            this.drpDnBookmark.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.drpDnBookmark.Image = ((System.Drawing.Image)(resources.GetObject("drpDnBookmark.Image")));
-            this.drpDnBookmark.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.drpDnBookmark.Name = "drpDnBookmark";
-            this.drpDnBookmark.Size = new System.Drawing.Size(29, 22);
-            this.drpDnBookmark.Text = "Bookmarks";
+            this.btnBookmark.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnBookmark.Image = ((System.Drawing.Image)(resources.GetObject("btnBookmark.Image")));
+            this.btnBookmark.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBookmark.Name = "btnBookmark";
+            this.btnBookmark.Size = new System.Drawing.Size(23, 22);
+            this.btnBookmark.Text = "Bookmarks";
+            this.btnBookmark.Click += new System.EventHandler(this.btnBookmark_Click);
             // 
             // BrowserHousing
             // 
@@ -164,6 +165,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripButton btnHome;
         private System.Windows.Forms.ToolStripTextBox txtBoxAddress;
         private System.Windows.Forms.ToolStripButton btnGo;
-        private System.Windows.Forms.ToolStripDropDownButton drpDnBookmark;
+        private System.Windows.Forms.ToolStripButton btnBookmark;
     }
 }

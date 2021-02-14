@@ -55,5 +55,14 @@ namespace WebBrowser.UI
             }
         }
 
+        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
