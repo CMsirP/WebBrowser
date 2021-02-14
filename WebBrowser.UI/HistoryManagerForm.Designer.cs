@@ -35,9 +35,9 @@ namespace WebBrowser.UI
             // listBoxHistory
             // 
             this.listBoxHistory.FormattingEnabled = true;
-            this.listBoxHistory.Location = new System.Drawing.Point(54, 61);
+            this.listBoxHistory.Location = new System.Drawing.Point(29, 61);
             this.listBoxHistory.Name = "listBoxHistory";
-            this.listBoxHistory.Size = new System.Drawing.Size(646, 433);
+            this.listBoxHistory.Size = new System.Drawing.Size(721, 433);
             this.listBoxHistory.TabIndex = 0;
             this.listBoxHistory.SelectedIndexChanged += new System.EventHandler(this.listBoxHistory_SelectedIndexChanged);
             // 

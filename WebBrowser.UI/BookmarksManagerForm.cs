@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
 
 namespace WebBrowser.UI
 {
@@ -17,5 +18,13 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        private void BookmarksManagerForm_Load(object sender, EventArgs e)
+        {
+            List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
+            foreach (var item in list)
+            {
+                string input = item.Title + "(" + item.URL + ")";
+                listBoxBookmarks.Items.Add(input);
+            }
     }
 }
