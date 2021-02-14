@@ -29,7 +29,7 @@ namespace WebBrowser.UI
             List<HistoryItem> list = HistoryItemManager.GetHistoryItems();
             foreach(var item in list)
             {
-                string input = "[" + item.Date + "] " + item.Title + "(" + item.URL + ")";
+                string input = "[" + item.Date + "] " + item.Title + " (" + item.URL + ")";
                 listBoxHistory.Items.Add(input);
             }
         }

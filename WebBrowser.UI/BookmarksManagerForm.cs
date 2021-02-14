@@ -23,7 +23,7 @@ namespace WebBrowser.UI
             List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
             foreach (var item in list)
             {
-                string input = item.Title + "(" + item.URL + ")";
+                string input = item.Title + " (" + item.URL + ")";
                 listBoxBookmarks.Items.Add(input);
             }
         }
