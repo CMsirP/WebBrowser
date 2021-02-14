@@ -70,35 +70,27 @@ namespace WebBrowser.UI
 
         private void btnBookmark_Click(object sender, EventArgs e)
         {
-            try
+
+            if(currentAddress == "")
+            {
+                return;
+            }
+            else
             {
                 string title = ((HtmlDocument)webBrowser1.Document).Title;
                 var item = new BookmarkItem();
                 item.Title = title;
                 item.URL = webBrowser1.Document.Url.ToString();
                 List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
-                if (item.Title == "" || item.Title == null || item.URL == "" || item.URL == null)
+                foreach (var bm in list)
                 {
-                    throw new FormatException();
-                }
-                else
-                {
-                    foreach (var bm in list)
+                    if (bm.Title.Equals(title))
                     {
-                        if (bm.Title.Equals(title))
-                        {
-                            return;
-                        }
+                        return;
                     }
-                    BookmarkItemManager.AddBookmarkItem(item);
                 }
+                BookmarkItemManager.AddBookmarkItem(item);
             }
-            catch
-            {
-                Exception exception;
-                MessageBox.Show("Invalid address, cannot be added to bookmarks. ");
-            }
-
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
