@@ -26,11 +26,23 @@ namespace WebBrowser.Data.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\History_Bookm" +
-            "arksDB.mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\cmp0106\\source\\repos" +
+            "\\WebBrowser\\WebBrowser.Data\\bin\\Debug\\History_BookmarksDB.mdf;Integrated Securit" +
+            "y=True")]
         public string History_BookmarksDBConnectionString {
             get {
                 return ((string)(this["History_BookmarksDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\History_Bookm" +
+            "arksDB.mdf;Integrated Security=True")]
+        public string History_BookmarksDBConnectionString1 {
+            get {
+                return ((string)(this["History_BookmarksDBConnectionString1"]));
             }
         }
     }
