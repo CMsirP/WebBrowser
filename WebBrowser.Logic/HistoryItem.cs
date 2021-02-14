@@ -6,6 +6,8 @@ namespace WebBrowser.Logic
 {
     public class HistoryItem
     {
+        private int id;
+        public int Id { get => id; set { id = value; } }
         private string url;
         public string URL { get => url; set { url = value; } }
         private string title;
@@ -13,5 +15,4 @@ namespace WebBrowser.Logic
         private DateTime date;
         public DateTime Date { get => date; set { date = value; } }
     }
-}
 }

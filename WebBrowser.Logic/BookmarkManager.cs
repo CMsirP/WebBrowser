@@ -18,14 +18,15 @@ namespace WebBrowser.Logic
             var results = new List<BookmarkItem>();
             var rows = adapter.GetData();
 
-            foreach(var row in rows)
-            {
-                var item = new BookmarkItem();
-                item.URL = row.URL;
-                item.Title = row.Title;
+            //foreach(var row in rows)
+            //{
+            //    var item = new BookmarkItem();
+            //    item.URL = row.URL;
+            //    item.Title = row.Title;
 
-                results.Add(item);
-            }
+            //    results.Add(item);
+            //}
+            return results;
         }
     }
 }

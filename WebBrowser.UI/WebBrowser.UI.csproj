@@ -46,11 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookmarksDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BookmarksDBDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BookmarksManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,11 +63,6 @@
     </Compile>
     <Compile Include="HistoryManagerForm.Designer.cs">
       <DependentUpon>HistoryManagerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HistoryDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="WebSlingerBrowser.cs">
       <SubType>Form</SubType>
@@ -103,28 +93,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BookmarksDBDataSet1.xsc">
-      <DependentUpon>BookmarksDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BookmarksDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BookmarksDBDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BookmarksDBDataSet1.xss">
-      <DependentUpon>BookmarksDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HistoryDBDataSet.xsc">
-      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HistoryDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HistoryDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HistoryDBDataSet.xss">
-      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
