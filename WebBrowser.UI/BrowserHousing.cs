@@ -70,18 +70,26 @@ namespace WebBrowser.UI
 
         private void btnBookmark_Click(object sender, EventArgs e)
         {
-            string title = ((HtmlDocument)webBrowser1.Document).Title;
-            List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
-            foreach (var bm in list)
-            {
-                if (bm.Title.Equals(title))
-                {
-                    return;
-                }
-            }
             var item = new BookmarkItem();
+            string title = ((HtmlDocument)webBrowser1.Document).Title;
             item.Title = title;
             item.URL = webBrowser1.Document.Url.ToString();
+            List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
+            if (item.Title == "" || item.Title == null || item.URL == "" || item.URL == null)
+            {
+                return;
+            }
+            else
+            {
+                foreach (var bm in list)
+                {
+                    if (bm.Title.Equals(title))
+                    {
+                        return;
+                    }
+                }
+                BookmarkItemManager.AddBookmarkItem(item);
+            }
 
         }
 
