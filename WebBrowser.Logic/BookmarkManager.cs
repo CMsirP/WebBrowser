@@ -4,7 +4,11 @@ using System.Text;
 
 namespace WebBrowser.Logic
 {
-    class BookmarkManager
+    public class BookmarkManager
     {
+        public static void addBookmark()
+        {
+
+        }
     }
 }

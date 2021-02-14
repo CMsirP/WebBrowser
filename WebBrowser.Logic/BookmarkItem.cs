@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WebBrowser.Logic
 {
-    class BookmarkItem
+    public class BookmarkItem
     {
         private string url;
         public string URL { get => url; set { url = value; } }
