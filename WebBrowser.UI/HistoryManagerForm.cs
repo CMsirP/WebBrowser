@@ -26,7 +26,12 @@ namespace WebBrowser.UI
 
         private void HistoryManagerForm_Load(object sender, EventArgs e)
         {
-            List<HistoryItem> list = new List<HistoryItem>();
+            List<HistoryItem> list = HistoryItemManager.GetHistoryItems();
+            foreach(var item in list)
+            {
+                string input = "[" + item.Date + "] " + item.Title + "(" + item.URL + ")";
+                listBoxHistory.Items.Add(input);
+            }
         }
     }
 }
