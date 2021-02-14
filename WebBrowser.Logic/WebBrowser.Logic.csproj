@@ -47,5 +47,11 @@
     <Compile Include="HistoryItemManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebBrowser.Data\WebBrowser.Data.csproj">
+      <Project>{8ad8cb05-c9bf-44d2-9e9f-4f20bf20eccb}</Project>
+      <Name>WebBrowser.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
