@@ -72,5 +72,15 @@ namespace WebBrowser.UI
         {
             HistoryItemManager.DeleteAllHistoryItems();
         }
+
+        private void tabPage1_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabPage1_SizeChanged(object sender, EventArgs e)
+        {
+        
+        }
     }
 }

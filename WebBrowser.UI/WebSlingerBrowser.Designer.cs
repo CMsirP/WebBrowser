@@ -38,13 +38,13 @@ namespace WebBrowser.UI
             this.exitWebBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageBookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.browserHousing1 = new WebBrowser.UI.BrowserHousing();
-            this.clearHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -126,6 +126,13 @@ namespace WebBrowser.UI
             this.manageHistoryToolStripMenuItem.Text = "Manage History";
             this.manageHistoryToolStripMenuItem.Click += new System.EventHandler(this.manageHistoryToolStripMenuItem_Click);
             // 
+            // clearHistoryToolStripMenuItem
+            // 
+            this.clearHistoryToolStripMenuItem.Name = "clearHistoryToolStripMenuItem";
+            this.clearHistoryToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.clearHistoryToolStripMenuItem.Text = "Clear History";
+            this.clearHistoryToolStripMenuItem.Click += new System.EventHandler(this.clearHistoryToolStripMenuItem_Click);
+            // 
             // manageBookmarksToolStripMenuItem
             // 
             this.manageBookmarksToolStripMenuItem.Name = "manageBookmarksToolStripMenuItem";
@@ -151,10 +158,11 @@ namespace WebBrowser.UI
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 52);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(752, 386);
+            this.tabControl1.Size = new System.Drawing.Size(904, 522);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -163,10 +171,12 @@ namespace WebBrowser.UI
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(744, 360);
+            this.tabPage1.Size = new System.Drawing.Size(896, 496);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "New Tab";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.SizeChanged += new System.EventHandler(this.tabPage1_SizeChanged);
+            this.tabPage1.MouseHover += new System.EventHandler(this.tabPage1_MouseHover);
             // 
             // browserHousing1
             // 
@@ -175,16 +185,9 @@ namespace WebBrowser.UI
             this.browserHousing1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.browserHousing1.Location = new System.Drawing.Point(3, 3);
             this.browserHousing1.Name = "browserHousing1";
-            this.browserHousing1.Size = new System.Drawing.Size(738, 354);
+            this.browserHousing1.Size = new System.Drawing.Size(890, 490);
             this.browserHousing1.TabIndex = 0;
             this.browserHousing1.Load += new System.EventHandler(this.browserHousing1_Load);
-            // 
-            // clearHistoryToolStripMenuItem
-            // 
-            this.clearHistoryToolStripMenuItem.Name = "clearHistoryToolStripMenuItem";
-            this.clearHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clearHistoryToolStripMenuItem.Text = "Clear History";
-            this.clearHistoryToolStripMenuItem.Click += new System.EventHandler(this.clearHistoryToolStripMenuItem_Click);
             // 
             // WebSlingerBrowser
             // 
