@@ -105,5 +105,15 @@ namespace WebBrowser.UI
                 HistoryItemManager.AddHistoryItem(item);
             }
         }
+
+        private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
+        {
+            progressBar.Maximum = (int) e.MaximumProgress;
+            if (((int) e.CurrentProgress >= progressBar.Minimum && (int) e.CurrentProgress <= progressBar.Maximum)) 
+            {
+                progressBar.Value = (int)e.CurrentProgress;
+            }
+            
+        }
     }
 }
