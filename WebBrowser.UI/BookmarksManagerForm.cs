@@ -27,6 +27,28 @@ namespace WebBrowser.UI
                 listBoxBookmarks.Items.Add(input);
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string keyword = txtBoxSearch.Text;
+            List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
+            List<string> items = new List<string>();
+
+            foreach (var item in list)
+            {
+                string input = item.Title + " (" + item.URL + ")";
+                if (input.Contains(keyword))
+                {
+                    items.Add(input);
+                }
+
+            }
+            listBoxBookmarks.Items.Clear();
+            foreach (string item in items)
+            {
+                listBoxBookmarks.Items.Add(item);
+            }
+        }
     }
 
 }
