@@ -51,12 +51,12 @@ namespace WebBrowser.UI
                 {
                     items.Add(input);
                 }
-                
+
             }
             listBoxHistory.Items.Clear();
             foreach (string item in items)
             {
-                    listBoxHistory.Items.Add(item);
+                listBoxHistory.Items.Add(item);
             }
         }
 
@@ -87,4 +87,11 @@ namespace WebBrowser.UI
             }
         }
 
+        private void btnClearHistory_Click(object sender, EventArgs e)
+        {
+            HistoryItemManager.DeleteAllHistoryItems();
+            listBoxHistory.Items.Clear();
+            LoadListBox();
+        }
+    }
 }

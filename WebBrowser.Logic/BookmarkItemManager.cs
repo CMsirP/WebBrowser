@@ -26,5 +26,10 @@ namespace WebBrowser.Logic
             }
             return result;
         }
+        public static void DeleteBookmarkItem(int id)
+        {
+            var adapter = new BookmarksTableAdapter();
+            adapter.DeleteItem(id);
+        }
     }
 }

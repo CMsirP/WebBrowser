@@ -90,6 +90,7 @@ namespace WebBrowser.UI
             this.btnClearHistory.TabIndex = 6;
             this.btnClearHistory.Text = "Clear History";
             this.btnClearHistory.UseVisualStyleBackColor = true;
+            this.btnClearHistory.Click += new System.EventHandler(this.btnClearHistory_Click);
             // 
             // HistoryManagerForm
             // 
