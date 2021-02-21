@@ -112,6 +112,11 @@ namespace WebBrowser.UI
             if (((int) e.CurrentProgress >= progressBar.Minimum && (int) e.CurrentProgress <= progressBar.Maximum)) 
             {
                 progressBar.Value = (int)e.CurrentProgress;
+                toolStripStatusLabel1.Text = "Loading";
+            }
+            if ((int) e.CurrentProgress == progressBar.Maximum)
+            {
+                toolStripStatusLabel1.Text = "Done";
             }
             
         }
