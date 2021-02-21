@@ -55,5 +55,11 @@ namespace WebBrowser.UI
                     listBoxHistory.Items.Add(item);
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<HistoryItem> list = HistoryItemManager.GetHistoryItems();
+
+        }
     }
 }

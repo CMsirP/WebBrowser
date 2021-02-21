@@ -27,10 +27,19 @@ namespace WebBrowser.Logic
             return result;
         }
 
-        public static void DeleteHistoryItem(HistoryItem item)
+        public static void DeleteHistoryItem(int id)
         {
             var adapter = new HistoryTableAdapter();
-            adapter.DeleteItem(item.Id);
+            adapter.DeleteItem(id);
+        }
+
+        public static void DeleteAllHistoryItems()
+        {
+            var adapter = new HistoryTableAdapter();
+            foreach(var item in GetHistoryItems())
+            {
+                adapter.DeleteItem(item.Id);
+            }
         }
     }
 }
