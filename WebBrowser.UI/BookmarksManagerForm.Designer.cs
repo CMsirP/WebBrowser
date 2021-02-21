@@ -33,6 +33,7 @@ namespace WebBrowser.UI
             this.lblSearchTerms = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBoxSearch = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxBookmarks
@@ -46,7 +47,7 @@ namespace WebBrowser.UI
             // lblSearchTerms
             // 
             this.lblSearchTerms.AutoSize = true;
-            this.lblSearchTerms.Location = new System.Drawing.Point(787, 59);
+            this.lblSearchTerms.Location = new System.Drawing.Point(782, 59);
             this.lblSearchTerms.Name = "lblSearchTerms";
             this.lblSearchTerms.Size = new System.Drawing.Size(133, 13);
             this.lblSearchTerms.TabIndex = 1;
@@ -54,9 +55,9 @@ namespace WebBrowser.UI
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(790, 127);
+            this.btnSearch.Location = new System.Drawing.Point(781, 127);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(82, 31);
+            this.btnSearch.Size = new System.Drawing.Size(64, 36);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -64,16 +65,27 @@ namespace WebBrowser.UI
             // 
             // txtBoxSearch
             // 
-            this.txtBoxSearch.Location = new System.Drawing.Point(790, 85);
+            this.txtBoxSearch.Location = new System.Drawing.Point(781, 84);
             this.txtBoxSearch.Name = "txtBoxSearch";
-            this.txtBoxSearch.Size = new System.Drawing.Size(130, 20);
+            this.txtBoxSearch.Size = new System.Drawing.Size(134, 20);
             this.txtBoxSearch.TabIndex = 3;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(851, 127);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(64, 36);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // BookmarksManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 540);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtBoxSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearchTerms);
@@ -92,5 +104,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.Label lblSearchTerms;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtBoxSearch;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

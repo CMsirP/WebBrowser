@@ -18,7 +18,7 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        private void BookmarksManagerForm_Load(object sender, EventArgs e)
+        private void Load_ListBox()
         {
             List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
             foreach (var item in list)
@@ -26,6 +26,10 @@ namespace WebBrowser.UI
                 string input = item.Title + " (" + item.URL + ")";
                 listBoxBookmarks.Items.Add(input);
             }
+        }
+        private void BookmarksManagerForm_Load(object sender, EventArgs e)
+        {
+            Load_ListBox();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -47,6 +51,32 @@ namespace WebBrowser.UI
             foreach (string item in items)
             {
                 listBoxBookmarks.Items.Add(item);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<BookmarkItem> list = BookmarkItemManager.GetBookmarkItems();
+            BookmarkItem current = new BookmarkItem();
+            try
+            {
+                string[] info = listBoxBookmarks.SelectedItem.ToString().Split('(', ')');
+                current.Title = info[1].Trim();
+                current.URL = info[2].Trim();
+                foreach (var item in list)
+                {
+                    if (current.Title.Equals(item.Title) && current.URL.Equals(item.URL))
+                    {
+                        BookmarkItemManager.DeleteBookmarkItem(item.Id);
+                        listBoxBookmarks.Items.Clear();
+                        Load_ListBox();
+                        break;
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error!");
             }
         }
     }
