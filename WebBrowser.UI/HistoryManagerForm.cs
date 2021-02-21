@@ -64,18 +64,26 @@ namespace WebBrowser.UI
         {
             List<HistoryItem> list = HistoryItemManager.GetHistoryItems();
             HistoryItem current = new HistoryItem();
-            string[] info = listBoxHistory.SelectedItem.ToString().Split('[', ']', '(', ')');
-            current.Date = DateTime.Parse(info[0]);
-            current.Title = info[1].Trim();
-            current.URL = info[2];
-            foreach(var item in list)
+            try
             {
-                if (current.Date.Equals(item.Date) && current.Title.Equals(item.Title) && current.URL.Equals(item.URL))
+                string[] info = listBoxHistory.SelectedItem.ToString().Split('[', ']', '(', ')');
+                current.Date = DateTime.Parse(info[1]);
+                current.Title = info[2].Trim();
+                current.URL = info[3];
+                foreach (var item in list)
                 {
-                    HistoryItemManager.DeleteHistoryItem(item.Id);
-                    LoadListBox();
-                    break;
+                    if (current.Date.Date.Equals(item.Date.Date) && current.Title.Equals(item.Title) && current.URL.Equals(item.URL))
+                    {
+                        HistoryItemManager.DeleteHistoryItem(item.Id);
+                        listBoxHistory.Items.Clear();
+                        LoadListBox();
+                        break;
+                    }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Error!");
             }
         }
     }
