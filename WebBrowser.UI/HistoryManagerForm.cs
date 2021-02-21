@@ -86,5 +86,5 @@ namespace WebBrowser.UI
                 MessageBox.Show("Error!");
             }
         }
-    }
+
 }

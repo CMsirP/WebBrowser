@@ -34,6 +34,7 @@ namespace WebBrowser.UI
             this.lblMsg1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnClearHistory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxHistory
@@ -49,13 +50,13 @@ namespace WebBrowser.UI
             // 
             this.txtBoxSearch.Location = new System.Drawing.Point(773, 94);
             this.txtBoxSearch.Name = "txtBoxSearch";
-            this.txtBoxSearch.Size = new System.Drawing.Size(142, 20);
+            this.txtBoxSearch.Size = new System.Drawing.Size(185, 20);
             this.txtBoxSearch.TabIndex = 1;
             // 
             // lblMsg1
             // 
             this.lblMsg1.AutoSize = true;
-            this.lblMsg1.Location = new System.Drawing.Point(770, 61);
+            this.lblMsg1.Location = new System.Drawing.Point(793, 61);
             this.lblMsg1.Name = "lblMsg1";
             this.lblMsg1.Size = new System.Drawing.Size(133, 13);
             this.lblMsg1.TabIndex = 2;
@@ -63,7 +64,7 @@ namespace WebBrowser.UI
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(773, 141);
+            this.btnSearch.Location = new System.Drawing.Point(773, 136);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(85, 29);
             this.btnSearch.TabIndex = 3;
@@ -81,11 +82,21 @@ namespace WebBrowser.UI
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnClearHistory
+            // 
+            this.btnClearHistory.Location = new System.Drawing.Point(873, 193);
+            this.btnClearHistory.Name = "btnClearHistory";
+            this.btnClearHistory.Size = new System.Drawing.Size(85, 29);
+            this.btnClearHistory.TabIndex = 6;
+            this.btnClearHistory.Text = "Clear History";
+            this.btnClearHistory.UseVisualStyleBackColor = true;
+            // 
             // HistoryManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 538);
+            this.Controls.Add(this.btnClearHistory);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblMsg1);
@@ -106,5 +117,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.Label lblMsg1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClearHistory;
     }
 }
