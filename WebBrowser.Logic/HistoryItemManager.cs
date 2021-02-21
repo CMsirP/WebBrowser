@@ -26,5 +26,6 @@ namespace WebBrowser.Logic
             }
             return result;
         }
+
     }
 }
