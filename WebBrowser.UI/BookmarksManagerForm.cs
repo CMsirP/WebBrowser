@@ -61,8 +61,8 @@ namespace WebBrowser.UI
             try
             {
                 string[] info = listBoxBookmarks.SelectedItem.ToString().Split('(', ')');
-                current.Title = info[1].Trim();
-                current.URL = info[2].Trim();
+                current.Title = info[0].Trim();
+                current.URL = info[1].Trim();
                 foreach (var item in list)
                 {
                     if (current.Title.Equals(item.Title) && current.URL.Equals(item.URL))
