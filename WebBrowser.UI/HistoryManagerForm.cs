@@ -24,14 +24,18 @@ namespace WebBrowser.UI
 
         }
 
-        private void HistoryManagerForm_Load(object sender, EventArgs e)
+        private void LoadListBox()
         {
             List<HistoryItem> list = HistoryItemManager.GetHistoryItems();
-            foreach(var item in list)
+            foreach (var item in list)
             {
                 string input = "[" + item.Date + "] " + item.Title + " (" + item.URL + ")";
                 listBoxHistory.Items.Add(input);
             }
+        }
+        private void HistoryManagerForm_Load(object sender, EventArgs e)
+        {
+            LoadListBox();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -59,7 +63,20 @@ namespace WebBrowser.UI
         private void btnDelete_Click(object sender, EventArgs e)
         {
             List<HistoryItem> list = HistoryItemManager.GetHistoryItems();
-
+            HistoryItem current = new HistoryItem();
+            string[] info = listBoxHistory.SelectedItem.ToString().Split('[', ']', '(', ')');
+            current.Date = DateTime.Parse(info[0]);
+            current.Title = info[1].Trim();
+            current.URL = info[2];
+            foreach(var item in list)
+            {
+                if (current.Date.Equals(item.Date) && current.Title.Equals(item.Title) && current.URL.Equals(item.URL))
+                {
+                    HistoryItemManager.DeleteHistoryItem(item.Id);
+                    LoadListBox();
+                    break;
+                }
+            }
         }
     }
 }
