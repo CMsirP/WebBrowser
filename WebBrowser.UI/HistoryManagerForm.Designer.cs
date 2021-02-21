@@ -30,6 +30,9 @@ namespace WebBrowser.UI
         private void InitializeComponent()
         {
             this.listBoxHistory = new System.Windows.Forms.ListBox();
+            this.txtBoxSearch = new System.Windows.Forms.TextBox();
+            this.lblMsg1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxHistory
@@ -41,21 +44,54 @@ namespace WebBrowser.UI
             this.listBoxHistory.TabIndex = 0;
             this.listBoxHistory.SelectedIndexChanged += new System.EventHandler(this.listBoxHistory_SelectedIndexChanged);
             // 
+            // txtBoxSearch
+            // 
+            this.txtBoxSearch.Location = new System.Drawing.Point(773, 94);
+            this.txtBoxSearch.Name = "txtBoxSearch";
+            this.txtBoxSearch.Size = new System.Drawing.Size(142, 20);
+            this.txtBoxSearch.TabIndex = 1;
+            // 
+            // lblMsg1
+            // 
+            this.lblMsg1.AutoSize = true;
+            this.lblMsg1.Location = new System.Drawing.Point(770, 61);
+            this.lblMsg1.Name = "lblMsg1";
+            this.lblMsg1.Size = new System.Drawing.Size(133, 13);
+            this.lblMsg1.TabIndex = 2;
+            this.lblMsg1.Text = "Enter Search Terms Below";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(773, 141);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(85, 29);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // HistoryManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 534);
+            this.ClientSize = new System.Drawing.Size(994, 538);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.lblMsg1);
+            this.Controls.Add(this.txtBoxSearch);
             this.Controls.Add(this.listBoxHistory);
             this.Name = "HistoryManagerForm";
             this.Text = "History Manager";
             this.Load += new System.EventHandler(this.HistoryManagerForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListBox listBoxHistory;
+        private System.Windows.Forms.TextBox txtBoxSearch;
+        private System.Windows.Forms.Label lblMsg1;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

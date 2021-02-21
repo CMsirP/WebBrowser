@@ -33,5 +33,17 @@ namespace WebBrowser.UI
                 listBoxHistory.Items.Add(input);
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string keyword = txtBoxSearch.Text;
+            foreach (string item in listBoxHistory.Items)
+            {
+                if (!item.Contains(keyword))
+                {
+                    listBoxHistory.Items.Remove(item);
+                }
+            }
+        }
     }
 }
