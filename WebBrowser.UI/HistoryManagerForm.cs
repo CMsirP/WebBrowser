@@ -37,12 +37,22 @@ namespace WebBrowser.UI
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string keyword = txtBoxSearch.Text;
-            foreach (string item in listBoxHistory.Items)
+            List<HistoryItem> list = HistoryItemManager.GetHistoryItems();
+            List<string> items = new List<string>();
+
+            foreach (var item in list)
             {
-                if (!item.Contains(keyword))
+                string input = "[" + item.Date + "] " + item.Title + " (" + item.URL + ")";
+                if (input.Contains(keyword))
                 {
-                    listBoxHistory.Items.Remove(item);
+                    items.Add(input);
                 }
+                
+            }
+            listBoxHistory.Items.Clear();
+            foreach (string item in items)
+            {
+                    listBoxHistory.Items.Add(item);
             }
         }
     }
