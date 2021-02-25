@@ -104,13 +104,5 @@ namespace WebBrowser.UI
             }
         }
 
-        private void setAsHomePageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedTab.Controls.ContainsKey("browserHousing1"))
-            {
-                BrowserHousing bh = (BrowserHousing)tabControl1.SelectedTab.Controls["browserHousing1"];
-                BrowserHousing.HomePage = bh.webBrowser1.Url.ToString();
-            }
-        }
     }
 }

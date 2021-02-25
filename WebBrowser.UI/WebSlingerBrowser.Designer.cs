@@ -44,7 +44,6 @@ namespace WebBrowser.UI
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.setAsHomePageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.browserHousing1 = new WebBrowser.UI.BrowserHousing();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -70,7 +69,6 @@ namespace WebBrowser.UI
             this.closeCurrentTabToolStripMenuItem,
             this.savePageAsHTMLToolStripMenuItem,
             this.printPageToolStripMenuItem,
-            this.setAsHomePageToolStripMenuItem,
             this.exitWebBrowserToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -126,21 +124,21 @@ namespace WebBrowser.UI
             // manageHistoryToolStripMenuItem
             // 
             this.manageHistoryToolStripMenuItem.Name = "manageHistoryToolStripMenuItem";
-            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.manageHistoryToolStripMenuItem.Text = "Manage History";
             this.manageHistoryToolStripMenuItem.Click += new System.EventHandler(this.manageHistoryToolStripMenuItem_Click);
             // 
             // clearHistoryToolStripMenuItem
             // 
             this.clearHistoryToolStripMenuItem.Name = "clearHistoryToolStripMenuItem";
-            this.clearHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearHistoryToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.clearHistoryToolStripMenuItem.Text = "Clear History";
             this.clearHistoryToolStripMenuItem.Click += new System.EventHandler(this.clearHistoryToolStripMenuItem_Click);
             // 
             // manageBookmarksToolStripMenuItem
             // 
             this.manageBookmarksToolStripMenuItem.Name = "manageBookmarksToolStripMenuItem";
-            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.manageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
             this.manageBookmarksToolStripMenuItem.Click += new System.EventHandler(this.manageBookmarksToolStripMenuItem_Click);
             // 
@@ -155,7 +153,7 @@ namespace WebBrowser.UI
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -181,13 +179,6 @@ namespace WebBrowser.UI
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.SizeChanged += new System.EventHandler(this.tabPage1_SizeChanged);
             this.tabPage1.MouseHover += new System.EventHandler(this.tabPage1_MouseHover);
-            // 
-            // setAsHomePageToolStripMenuItem
-            // 
-            this.setAsHomePageToolStripMenuItem.Name = "setAsHomePageToolStripMenuItem";
-            this.setAsHomePageToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.setAsHomePageToolStripMenuItem.Text = "Set As Home Page";
-            this.setAsHomePageToolStripMenuItem.Click += new System.EventHandler(this.setAsHomePageToolStripMenuItem_Click);
             // 
             // browserHousing1
             // 
@@ -237,6 +228,5 @@ namespace WebBrowser.UI
         private BrowserHousing browserHousing1;
         private System.Windows.Forms.ToolStripMenuItem clearHistoryToolStripMenuItem;
         public System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.ToolStripMenuItem setAsHomePageToolStripMenuItem;
     }
 }
