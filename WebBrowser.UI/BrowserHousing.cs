@@ -15,10 +15,13 @@ namespace WebBrowser.UI
     {
         private string currentAddress = "";
         public static string HomePage { get; set; }
+        private Boolean startUp = true;
 
         public BrowserHousing()
         {
             InitializeComponent();
+            HomePage = "https://www.google.com/";
+            webBrowser1.Navigate(HomePage);
         }
         private void btnGo_Click(object sender, EventArgs e)
         {
@@ -97,7 +100,7 @@ namespace WebBrowser.UI
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            if (e.Url.Equals(webBrowser1.Url) && webBrowser1.ReadyState == WebBrowserReadyState.Complete)
+            if (e.Url.Equals(webBrowser1.Url) && webBrowser1.ReadyState == WebBrowserReadyState.Complete && (!e.Url.Equals(HomePage) || !startUp))
             {
                 string title = ((HtmlDocument)webBrowser1.Document).Title;
                 var item = new HistoryItem();
@@ -106,6 +109,7 @@ namespace WebBrowser.UI
                 item.Date = DateTime.Now;
                 HistoryItemManager.AddHistoryItem(item);
             }
+            startUp = false;
         }
 
         private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
