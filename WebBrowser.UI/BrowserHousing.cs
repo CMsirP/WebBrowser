@@ -18,6 +18,7 @@ namespace WebBrowser.UI
         public BrowserHousing()
         {
             InitializeComponent();
+            webBrowser1.GoHome();
         }
         private void btnGo_Click(object sender, EventArgs e)
         {
