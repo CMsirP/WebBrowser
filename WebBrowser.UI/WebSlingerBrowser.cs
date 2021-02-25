@@ -36,6 +36,7 @@ namespace WebBrowser.UI
             browserHousing.Name = "browserHousing1";
             var tabPage = new TabPage("New Tab");
             tabPage.Controls.Add(browserHousing);
+            browserHousing.Dock = DockStyle.Fill;
             tabControl1.TabPages.Add(tabPage);
             tabControl1.SelectedTab = tabPage;
 
