@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebBrowser.Logic;
+using System.Windows;
 
 namespace WebBrowser.UI
 {
@@ -25,16 +26,18 @@ namespace WebBrowser.UI
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You are using WebSlinger, a browser designed by Christopher Pinto. \r\n" +
+            MessageBox.Show("You are using Web Slinger, a browser designed by Christopher Pinto. \r\n" +
                 "Contact: cmp0106@auburn.edu");
         }
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BrowserHousing myBH = new BrowserHousing();
+            BrowserHousing browserHousing = new BrowserHousing();
+            browserHousing.Name = "browserHousing1";
             var tabPage = new TabPage("New Tab");
-            tabPage.Controls.Add(myBH);
+            tabPage.Controls.Add(browserHousing);
             tabControl1.TabPages.Add(tabPage);
+            tabControl1.SelectedTab = tabPage;
 
         }
 
@@ -81,6 +84,32 @@ namespace WebBrowser.UI
         private void tabPage1_SizeChanged(object sender, EventArgs e)
         {
         
+        }
+
+        private void printPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            var bh = tabControl1.SelectedTab.Controls.Cast<BrowserHousing>() //Finds specified control type, passes to var bh
+                                .FirstOrDefault(x => x is BrowserHousing);
+            bh.webBrowser1.ShowPrintPreviewDialog();
+        }
+
+        private void savePageAsHTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedTab.Controls.ContainsKey("browserHousing1"))
+            {
+                BrowserHousing bh = (BrowserHousing)tabControl1.SelectedTab.Controls["browserHousing1"];
+                bh.webBrowser1.ShowSaveAsDialog();
+            }
+        }
+
+        private void setAsHomePageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab.Controls.ContainsKey("browserHousing1"))
+            {
+                BrowserHousing bh = (BrowserHousing)tabControl1.SelectedTab.Controls["browserHousing1"];
+                BrowserHousing.HomePage = bh.webBrowser1.Url.ToString();
+            }
         }
     }
 }

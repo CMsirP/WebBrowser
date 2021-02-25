@@ -114,6 +114,7 @@ namespace WebBrowser.UI
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(23, 22);
             this.btnHome.Text = "Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // txtBoxAddress
             // 
@@ -196,7 +197,6 @@ namespace WebBrowser.UI
         #endregion
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnBack;
         private System.Windows.Forms.ToolStripButton btnForward;
@@ -209,5 +209,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripProgressBar progressBar;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        public System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

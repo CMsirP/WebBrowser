@@ -14,6 +14,7 @@ namespace WebBrowser.UI
     public partial class BrowserHousing : UserControl
     {
         private string currentAddress = "";
+        public static string HomePage { get; set; }
 
         public BrowserHousing()
         {
@@ -36,7 +37,7 @@ namespace WebBrowser.UI
 
         private void txtBoxAddress_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -66,6 +67,7 @@ namespace WebBrowser.UI
             webBrowser1.ScriptErrorsSuppressed = true;
             txtBoxAddress.Text = webBrowser1.Url.ToString();
             currentAddress = txtBoxAddress.Text;
+            string title = ((HtmlDocument)webBrowser1.Document).Title;
         }
 
         private void btnBookmark_Click(object sender, EventArgs e)
@@ -120,5 +122,14 @@ namespace WebBrowser.UI
             }
             
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (HomePage != null && HomePage != "")
+            {
+                webBrowser1.Navigate(HomePage);
+            }
+        }
+
     }
 }
